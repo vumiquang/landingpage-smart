@@ -1,0 +1,30 @@
+@use "./variables" as *;
+
+@mixin flex($alignItem:flex-start, $justifyContent:flex-start) {
+    display: flex;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+}
+
+@mixin sm {
+    @media only screen and (max-width: $sm-width) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (max-width: $md-width) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (max-width: $lg-width) {
+        @content;
+    }
+}
+@mixin xl {
+    @media only screen and (max-width: $xl-width) {
+        @content;
+    }
+}

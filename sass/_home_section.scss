@@ -1,0 +1,100 @@
+@use './abstracts/' as *;
+
+.section-grey.home-section {
+  padding: 50px;
+}
+.home-section .container {
+  @include flex($alignItem: center);
+}
+.home-section .container > div {
+  width: 50%;
+}
+.home-section .container > div img {
+  width: 100%;
+  height: auto;
+}
+.home-section h1 {
+  font-family: $font-family-title;
+  color: $color-gray-darkest;
+  margin-bottom: 20px;
+}
+.home-section p {
+  margin-bottom: 20px;
+  color: $color-gray-dark;
+  font-size: 20px;
+}
+.home-section .newsletter-form {
+  margin-bottom: 15px;
+  font-size: $font-size-normal;
+  position: relative;
+}
+
+.newsletter-form i {
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  font-size: 20px;
+  color: $color-gray-light;
+}
+.newsletter-form form {
+  @include flex();
+  border-radius: 5px;
+  max-width: 500px;
+  overflow: hidden;
+ 
+}
+
+.newsletter-form form input {
+  flex: 1;
+  height: 60px;
+  outline: none;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: $font-size-normal;
+  padding-left: 45px;
+  &::placeholder {
+    color: $color-gray-light;
+  }
+}
+.newsletter-form form button {
+  height: 60px;
+  border-radius: 0;
+  background-color: $color-red;
+  font-size: $font-size-small;
+}
+.home-section .newsletter-form-terms {
+  font-size: $font-size-small;
+  color: $color-gray-light;
+  @include flex();
+}
+.home-section .newsletter-form-terms > div:first-child {
+  margin-right: 15px;
+}
+@include lg {
+  .home-section .container > div:first-child {
+    width: 60%;
+  }
+  .home-section .container > div:last-child {
+    width: 40%;
+  }
+}
+@include md {
+  .home-section .container {
+    flex-direction: column;
+  }
+  .home-section .container > div {
+    width: 100% !important;
+  }
+  .home-section .container > div:first-child {
+    margin-bottom: 20px;
+  }
+}
+@include sm {
+  .newsletter-form form {
+    flex-wrap: wrap;
+  }
+  .newsletter-form form button {
+    width: 100%;
+  }
+}

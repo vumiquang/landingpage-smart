@@ -1,0 +1,38 @@
+@use './abstracts/' as *;
+
+.about .section-title{
+    margin-bottom: 45px;
+}
+.about .container .wrap {
+  @include flex();
+  margin: 0 -15px;
+  @include md{
+    flex-direction: column;
+  }
+}
+.about .container .wrap > div {
+  margin: 0 15px;
+  border-radius: 10px;
+  @include md{
+    margin-bottom: 30px;
+  }
+}
+.about .about-content {
+  text-align: center;
+  padding: 25px 30px;
+  
+}
+.about .about-content i {
+  font-size: 46px;
+}
+.about .about-content .content-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about .about-content p {
+  padding: 0 12px;
+  color: $color-gray-light;
+  font-size: $font-size-normal;
+  line-height: 1.8;
+}

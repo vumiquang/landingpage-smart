@@ -1,0 +1,146 @@
+@use './abstracts/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-size: 100%;
+  font-family: $font-family-body;
+  overflow-x: hidden;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none;
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+.blue {
+  color: #0d6efd;
+}
+
+.red {
+  color: #e52f37;
+}
+
+.green {
+  color: #27b36a;
+}
+section {
+  padding: 90px 0 90px 0;
+}
+.section-white {
+  background: #fff;
+}
+
+.section-grey {
+  background: $bg-color-body;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+.w-100 {
+  width: 100%;
+}
+.btn {
+  font-family: $font-family-title;
+  font-size: $font-size-normal;
+  font-weight: 600;
+  padding: 10px 12px;
+  background: $color-blue;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+main {
+  padding-top: 77px;
+}
+.box-shadow{
+  box-shadow: 3px 4px 12px rgb(0 0 0 / 10%);
+}
+
+.content-title,.section-title{
+  font-family: $font-family-title;
+  color:$color-title;
+  text-align: center;
+}
+.hover-up{
+  transition: transform 2s;
+  &:hover{
+      transform: translateY(-20px);
+  }
+}
+@include xl {
+  .container {
+    max-width: 960px;
+  }
+}
+@include lg {
+  .container {
+    max-width: 720px;
+  }
+}
+@include md {
+  .container {
+    max-width: 540px;
+  }
+}
+@include sm {
+  .container {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+}
