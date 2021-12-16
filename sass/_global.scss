@@ -83,6 +83,10 @@ section {
 .section-grey {
   background: $bg-color-body;
 }
+.small-padding-top {
+  padding-top: 30px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1140px;
@@ -108,19 +112,21 @@ section {
 main {
   padding-top: 77px;
 }
-.box-shadow{
+.box-shadow {
   box-shadow: 3px 4px 12px rgb(0 0 0 / 10%);
 }
 
-.content-title,.section-title{
+.content-title,
+.section-title {
   font-family: $font-family-title;
-  color:$color-title;
+  color: $color-title;
   text-align: center;
+  margin-bottom: 45px;
 }
-.hover-up{
+.hover-up {
   transition: transform 2s;
-  &:hover{
-      transform: translateY(-20px);
+  &:hover {
+    transform: translateY(-20px);
   }
 }
 @include xl {

@@ -1,0 +1,38 @@
+@use './abstracts/' as *;
+
+.partner {
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include md {
+      flex-direction: column;
+    }
+  }
+  &-item {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 15%;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    @include md {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    img {
+      width: 100%;
+      max-width: 150px;
+      @include md {
+        max-width: 100%;
+      }
+    }
+  }
+  .section-title {
+    @include md {
+      font-size: 28px;
+    }
+  }
+}

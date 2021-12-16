@@ -84,6 +84,10 @@ section {
   background: #f4f5fc;
 }
 
+.small-padding-top {
+  padding-top: 30px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1140px;
@@ -117,10 +121,12 @@ main {
   box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.content-title, .section-title {
+.content-title,
+.section-title {
   font-family: "Nunito", sans-serif;
   color: #071E55;
   text-align: center;
+  margin-bottom: 45px;
 }
 
 .hover-up {
@@ -367,10 +373,6 @@ ul.navbar__menu {
     width: 100%;
   }
 }
-.about .section-title {
-  margin-bottom: 45px;
-}
-
 .about .container .wrap {
   display: flex;
   align-items: flex-start;
@@ -551,6 +553,47 @@ ul.navbar__menu {
 
 .popup.hidden {
   display: none;
+}
+
+.partner-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+  .partner-wrap {
+    flex-direction: column;
+  }
+}
+.partner-item {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 15%;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .partner-item {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.partner-item img {
+  width: 100%;
+  max-width: 150px;
+}
+@media only screen and (max-width: 768px) {
+  .partner-item img {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .partner .section-title {
+    font-size: 28px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

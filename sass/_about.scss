@@ -1,8 +1,5 @@
 @use './abstracts/' as *;
 
-.about .section-title{
-    margin-bottom: 45px;
-}
 .about .container .wrap {
   @include flex();
   margin: 0 -15px;
