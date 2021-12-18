@@ -1,0 +1,68 @@
+@use './abstracts/' as *;
+
+.ourteam {
+  text-align: center;
+  &__list {
+    display: flex;
+    @include md {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    padding: 0 12px;
+    @include md {
+        padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+  &__avatar {
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  &__name {
+    color: $color-title;
+    font-family: $font-family-title;
+    font-size: 20px;
+  }
+  &__office {
+    font-size: $font-size-normal;
+    color: #acacac;
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-size: $font-size-normal;
+    color: $color-gray-light;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    a {
+      margin: 0 5px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100rem;
+      i {
+        font-size: 18px;
+        color: #fff;
+      }
+    }
+  }
+}
+.social-twitter {
+  background-color: #025bff;
+}
+.social-instagram {
+  background-color: #ff0202;
+}
+.social-facebook {
+  background-color: #014ad1;
+}
+.social-dribble {
+  background-color: #b500c5;
+}

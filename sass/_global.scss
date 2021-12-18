@@ -73,6 +73,12 @@ h6 {
 .green {
   color: #27b36a;
 }
+.orange {
+  color: #fc6a3f;
+}
+.yellow {
+  color: #fe9c24;
+}
 section {
   padding: 90px 0 90px 0;
 }
@@ -137,11 +143,13 @@ main {
 @include lg {
   .container {
     max-width: 720px;
+    padding: 0 10px;
   }
 }
 @include md {
   .container {
     max-width: 540px;
+    padding: 0 10px;
   }
 }
 @include sm {

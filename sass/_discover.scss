@@ -1,0 +1,44 @@
+@use './abstracts/' as *;
+
+.discover {
+  .section-title {
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  .wrap {
+    display: flex;
+    align-items: center;
+    @include md {
+      flex-direction: column;
+    }
+    & > div {
+      width: 50%;
+      @include md {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    & > div:first-child {
+      padding-right: 15px;
+      @include md {
+        margin-bottom: 20px;
+      }
+    }
+    & > div:last-child {
+      padding-left: 10px;
+    }
+  }
+  &__desc,
+  &__list {
+    color: $color-gray-light;
+    margin-bottom: 20px;
+    font-size: $font-size-normal;
+    i {
+      font-size: 26px;
+      line-height: 26px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+}
