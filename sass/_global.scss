@@ -37,6 +37,7 @@ a:visited {
 
 img {
   max-width: 100%;
+  vertical-align: middle;
 }
 
 h1 {
@@ -79,13 +80,18 @@ h6 {
 .yellow {
   color: #fe9c24;
 }
+.brown {
+  color: #24292f;
+}
 section {
   padding: 90px 0 90px 0;
 }
 .section-white {
   background: #fff;
 }
-
+.no-padding-bottom {
+  padding-bottom: 0;
+}
 .section-grey {
   background: $bg-color-body;
 }
@@ -133,6 +139,23 @@ main {
   transition: transform 2s;
   &:hover {
     transform: translateY(-20px);
+  }
+}
+
+.sticky {
+  position: fixed;
+
+  right: 0;
+  width: 100vw;
+  z-index: 9999;
+  animation: animDown 0.5s forwards;
+}
+@keyframes animDown {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 0;
   }
 }
 @include xl {

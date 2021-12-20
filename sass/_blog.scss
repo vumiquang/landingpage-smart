@@ -1,0 +1,80 @@
+@use './abstracts/' as *;
+
+.blog {
+  &__list {
+    display: flex;
+    margin: 0 -15px;
+    @include md {
+      margin: 0;
+      flex-direction: column;
+    }
+  }
+  &__item {
+    margin: 0 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    @include md {
+      margin: 0;
+      margin-bottom: 40px;
+    }
+  }
+  &__image {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    &--overlay {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(1, 63, 71, 0.6);
+      i {
+        font-size: 40px;
+        color: #fff;
+      }
+    }
+    &:hover .blog__image--overlay {
+      opacity: 1;
+    }
+  }
+  &__text {
+    padding: 25px;
+    background: white;
+  }
+  &__title {
+    h3 {
+      color: $color-title;
+      font-size: 20px;
+      font-family: $font-family-title;
+      margin-bottom: 10px;
+      &:hover {
+        color: lighten($color-title, 20%);
+        text-decoration: underline;
+      }
+    }
+  }
+  &__theme {
+    color: $color-gray-light;
+    font-size: 14px;
+    font-style: italic;
+    span:hover {
+      color: lighten($color-title, 20%);
+    }
+  }
+  &__desc {
+    margin-top: 10px;
+    color: $color-gray-light;
+    font-size: $font-size-normal;
+  }
+}

@@ -1,0 +1,73 @@
+@use './abstracts/' as *;
+
+.price {
+  text-align: center;
+  &__list {
+    display: flex;
+    margin: 0 -15px;
+    @include md {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+  &__item {
+    margin: 0 15px;
+    flex: 1;
+    padding: 50px;
+    border-radius: 7px;
+    transition: all 0.5s;
+    &:hover {
+      box-shadow: 3px 4px 12px rgb(0 0 0 / 10%), 0px 2px 0 rgb(18, 148, 255);
+    }
+    @include md {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__type {
+    font-size: 20px;
+    color: $color-title;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__amount {
+    font-size: 65px;
+    font-family: $font-family-title;
+    color: $color-title;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__time {
+    font-size: $font-size-normal;
+    color: #6a6a6a;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+  }
+  &__desc {
+    text-align: left;
+    margin-bottom: 30px;
+    li {
+      margin-bottom: 10px;
+      i {
+        margin-right: 10px;
+      }
+      span {
+        color: #6a6a6a;
+      }
+    }
+  }
+  &__desc--strong {
+    font-weight: bold;
+  }
+  .btn--price {
+    border: 1px solid $color-blue;
+    background-color: white;
+    color: $color-blue;
+    transition: all 0.5s;
+    &:hover {
+      background-color: $color-blue;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use './abstracts/' as *;
+
+.feature {
+  &__list {
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    @include md {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+  &__item {
+    flex: 1;
+    max-width: 30%;
+    min-width: 25%;
+    margin: 0 15px;
+    margin-bottom: 30px;
+    display: flex;
+    @include lg {
+      flex-wrap: wrap;
+    }
+    @include md {
+      margin: 0;
+      max-width: 100%;
+      min-width: 0;
+      flex-wrap: nowrap;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__icon {
+    font-size: 40px;
+  }
+  &__info {
+    padding-left: 20px;
+  }
+  &__title {
+    font-size: 20px;
+    font-family: $font-family-title;
+    color: $color-title;
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-size: $font-size-normal;
+    color: $color-gray-light;
+  }
+}

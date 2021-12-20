@@ -5,9 +5,12 @@ const elePopup = document.querySelector('.popup');
 const btnPlayVideo = document.querySelectorAll('.play-video-popup');
 const iVideo = document.querySelector('.popup .popup-video');
 const eleBackdropPopup = document.querySelector('.popup-backdrop');
-//===========   Toggle menu ============
 
-toggleMenu.onclick = function () {
+const eleAccordions = document.querySelectorAll('.accordion .accordion__item');
+
+const eleHeader = document.querySelector('header');
+//===========   Toggle menu ============
+toggleMenu.onclick = () => {
   if (menuMoble.classList.contains('active')) {
     menuMoble.classList.remove('active');
     menuMoble.style.maxHeight = '0';
@@ -75,7 +78,39 @@ btnPlayVideo.forEach((btn) => {
 });
 
 //===========   Backdrop popup ============
-eleBackdropPopup.onclick = function () {
+eleBackdropPopup.onclick = () => {
   elePopup.classList.add('hidden');
   stopVideo();
+};
+
+// ====== Accordion How it work ===========
+function resetAccordion() {
+  eleAccordions.forEach((ele) => {
+    ele.classList.remove('active');
+    let accBody = ele.querySelector('.accordion__body');
+    accBody.style.maxHeight = '0';
+  });
+}
+
+eleAccordions.forEach((ele) => {
+  ele.onclick = () => {
+    if (!ele.classList.contains('active')) {
+      resetAccordion();
+      ele.classList.add('active');
+      let bodyHeight = ele.querySelector('.accordion__body p');
+      let accBody = ele.querySelector('.accordion__body');
+      accBody.style.maxHeight = bodyHeight.clientHeight + 'px';
+    } else {
+      resetAccordion();
+    }
+  };
+});
+
+// Sticky header
+window.onscroll = () => {
+  if (window.pageYOffset > 80) {
+    eleHeader.classList.add('sticky');
+  } else {
+    eleHeader.classList.remove('sticky');
+  }
 };

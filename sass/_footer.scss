@@ -1,0 +1,33 @@
+@use './abstracts/' as *;
+
+footer {
+  padding: 40px 0 20px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > p {
+      font-size: $font-size-normal;
+      color: $color-gray-light;
+      & span {
+        font-weight: bold;
+      }
+    }
+    & > div {
+      font-size: $font-size-normal;
+      & span {
+        color: $color-gray-light;
+      }
+      & * {
+        margin-right: 10px;
+      }
+      & i {
+        font-size: 30px;
+        vertical-align: middle;
+      }
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}

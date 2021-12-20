@@ -1,0 +1,115 @@
+@use './abstracts/' as *;
+
+.howitwork {
+  &__wrap {
+    display: flex;
+    @include md {
+      flex-direction: column;
+    }
+    & > div {
+      width: 50%;
+      @include md {
+        width: 100%;
+      }
+    }
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+    @include md {
+      margin-bottom: 20px;
+      padding-right: 0;
+    }
+    p {
+      font-size: $font-size-normal;
+      color: $color-gray-light;
+      margin-bottom: 20px;
+    }
+  }
+  &__platform {
+    display: flex;
+    h4 {
+      font-size: $font-size-normal;
+      color: $color-title;
+      margin-bottom: 10px;
+    }
+    > div {
+      padding-bottom: 20px;
+      @include md {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+    > div:first-child {
+      padding-right: 30px;
+      border-right: 1px solid #acacac;
+    }
+    > div:last-child {
+      padding-left: 20px;
+    }
+  }
+  &__star {
+    font-size: 16px;
+  }
+  .accordion {
+    &__item {
+      cursor: pointer;
+      background-color: #fff;
+      padding: 20px 25px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &__head {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .arrow {
+        position: absolute;
+        right: 20px;
+        font-size: 20px;
+        transition: all 0.2s;
+      }
+    }
+    &__icon {
+      display: inline-block;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100rem;
+      border: 2px solid $color-green;
+      margin-right: 10px;
+      i {
+        color: $color-green;
+      }
+    }
+    &__title {
+      font-family: $font-family-title;
+      font-size: 20px;
+      color: $color-title;
+    }
+    &__body {
+      overflow: hidden;
+      font-size: $font-size-normal;
+      color: $color-gray-light;
+      transition: all 0.5s;
+      p {
+        padding-top: 20px;
+      }
+    }
+    &__item.active {
+      .arrow {
+        transform: rotateZ(-180deg);
+        color: $color-blue;
+      }
+    }
+  }
+}
