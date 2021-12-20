@@ -22,7 +22,11 @@ toggleMenu.onclick = () => {
 
 // =========== Testermonial video click ============= =
 let widthWindow = document.documentElement.clientWidth;
-let widthYT = Math.round((60 / 100) * widthWindow);
+let widthYT = 0;
+if (widthWindow > 500) widthYT = Math.round((60 / 100) * widthWindow);
+else {
+  widthYT = widthWindow - 40;
+}
 let heightYT = Math.round((widthYT * 390) / 640);
 // Load script youtube
 var tag = document.createElement('script');
