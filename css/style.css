@@ -564,12 +564,13 @@ ul.navbar__menu {
   align-items: center;
 }
 .popup-video {
+  padding-top: 100px;
   position: relative;
   z-index: inherit;
 }
 .popup-close {
   position: absolute;
-  top: -40px;
+  top: 60px;
   right: -5px;
   z-index: 1000;
   cursor: pointer;

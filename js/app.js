@@ -20,7 +20,10 @@ toggleMenu.onclick = () => {
   }
 };
 
-// =========== Testermonial video click =============
+// =========== Testermonial video click ============= =
+let widthWindow = document.documentElement.clientWidth;
+let widthYT = Math.round((60 / 100) * widthWindow);
+let heightYT = Math.round((widthYT * 390) / 640);
 // Load script youtube
 var tag = document.createElement('script');
 tag.src = 'https://www.youtube.com/iframe_api';
@@ -30,8 +33,8 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '390',
-    width: '640',
+    height: heightYT,
+    width: widthYT,
     playerVars: {
       playsinline: 1,
     },
