@@ -9,6 +9,8 @@ const eleBackdropPopup = document.querySelector('.popup-backdrop');
 const eleAccordions = document.querySelectorAll('.accordion .accordion__item');
 
 const eleHeader = document.querySelector('header');
+const eleSections = [...document.querySelectorAll('section')];
+const navLink = [...document.querySelectorAll('.nav-link')];
 //===========   Toggle menu ============
 toggleMenu.onclick = () => {
   if (menuMoble.classList.contains('active')) {
@@ -114,10 +116,38 @@ eleAccordions.forEach((ele) => {
 });
 
 // Sticky header
-window.onscroll = () => {
+const stickyMenu = () => {
   if (window.pageYOffset > 80) {
     eleHeader.classList.add('sticky');
   } else {
     eleHeader.classList.remove('sticky');
   }
 };
+window.addEventListener('scroll', stickyMenu);
+
+// window menu highlight
+let options = {
+  threshold: 0.6,
+};
+function callback(entries, observer) {
+  entries.forEach((entry) => {
+    let id = entry.target.id || '-';
+    if (id === '-') return;
+
+    navLink.forEach((nav) => {
+      nav.classList.remove('active');
+    });
+
+    navLink.forEach((nav) => {
+      let hrefText = nav.getAttribute('href').split('#').join('');
+
+      if (hrefText == id) {
+        nav.classList.add('active');
+      }
+    });
+  });
+}
+let observer = new IntersectionObserver(callback, options);
+eleSections.forEach((sec) => {
+  observer.observe(sec);
+});
