@@ -16,6 +16,8 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+    <!-- Animated css -->
+    <link rel="stylesheet" href="./css/animate.css" />
     <!-- Css -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -69,7 +71,7 @@
       <!-- Begin home section -->
       <section class="section-grey home-section" id="home">
         <div class="container">
-          <div>
+          <div class="wow animate__slideInLeft">
             <h1>
               Discover The Wold's Most Advanced Online Tool
               <i class="bi bi-chat-left-quote green"></i>
@@ -87,7 +89,9 @@
               <div><i class="bi bi-check2 green"></i> Money Back Guarantee</div>
             </div>
           </div>
-          <div><img src="./assets/ui-design.png" /></div>
+          <div class="wow animate__slideInRight">
+            <img src="./assets/ui-design.png" />
+          </div>
         </div>
       </section>
       <!-- End home section -->
@@ -97,8 +101,8 @@
         <div class="container">
           <div class="wrap">
             <div
-              class="box-shadow about-content wow slideInUp hover-up"
-              data-wow-delay="5s"
+              class="box-shadow about-content wow animate__slideInUp hover-up"
+              data-wow-delay="0.5s"
             >
               <i class="bi bi-megaphone green"></i>
               <h4 class="content-title">Search Oportunities</h4>
@@ -108,8 +112,8 @@
               </p>
             </div>
             <div
-              class="box-shadow about-content wow slideInUp hover-up"
-              data-wow-delay="5s"
+              class="box-shadow about-content wow animate__slideInUp hover-up"
+              data-wow-delay="0.6s"
             >
               <i class="bi bi-gem red"></i>
               <h4 class="content-title">Search Oportunities</h4>
@@ -119,8 +123,8 @@
               </p>
             </div>
             <div
-              class="box-shadow about-content wow slideInUp hover-up"
-              data-wow-delay="5s"
+              class="box-shadow about-content wow animate__slideInUp hover-up"
+              data-wow-delay="0.7s"
             >
               <i class="bi bi-speedometer2 blue"></i>
               <h4 class="content-title">Search Oportunities</h4>
@@ -142,7 +146,10 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide testermonial">
-                <div class="testermonial-video">
+                <div
+                  class="testermonial-video wow animate__slideInLeft"
+                  data-wow-delay="0.5s"
+                >
                   <img
                     src="https://demo.epic-webdesign.com/tf-smart/v1/images/testimonials2.jpg"
                   />
@@ -151,7 +158,10 @@
                     data-video="LZnyRWELpww"
                   ></i>
                 </div>
-                <div class="testermonial-info">
+                <div
+                  class="testermonial-info wow animate__slideInRight"
+                  data-wow-delay="0.5s"
+                >
                   <i class="bi bi-chat-left-quote green"></i>
                   <p class="testermonial-comment">
                     Nemo enimat ipsam voluptatem quia voluptas situm ets
@@ -230,31 +240,58 @@
         <h2 class="section-title">Trusted By Over 9,000+ Businesses</h2>
         <div class="container">
           <div class="partner-wrap">
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.1s"
+            >
               <img src="./assets/partner1.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.2s"
+            >
               <img src="./assets/partner2.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.3s"
+            >
               <img src="./assets/partner3.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.4s"
+            >
               <img src="./assets/partner4.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.5s"
+            >
               <img src="./assets/partner5.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.6s"
+            >
               <img src="./assets/partner6.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.7s"
+            >
               <img src="./assets/partner7.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.8s"
+            >
               <img src="./assets/partner8.png" alt="" />
             </div>
-            <div class="partner-item box-shadow hover-up">
+            <div
+              class="partner-item wow animate__slideInUp box-shadow hover-up"
+              data-wow-delay="0.9s"
+            >
               <img src="./assets/partner9.png" alt="" />
             </div>
           </div>
@@ -265,7 +302,7 @@
       <section class="section-white discover">
         <div class="container">
           <div class="wrap">
-            <div>
+            <div class="wow animate__slideInLeft" data-wow-delay="0.3s">
               <h3 class="section-title">
                 Discover how we can help you to grow your business fast.
               </h3>
@@ -289,7 +326,7 @@
               </ul>
               <button class="btn">Discover More</button>
             </div>
-            <div>
+            <div class="wow animate__slideInRight" data-wow-delay="0.5s">
               <img src="./assets/digital-marketing.png" class="discover__img" />
             </div>
           </div>
@@ -303,28 +340,28 @@
           <div class="funfact__list">
             <div class="funfact__item">
               <i class="bi bi-gift-fill funfact__icon blue"></i>
-              <span class="funfact__count">1050+</span>
+              <span class="funfact__count" data-count="1050"></span>
               <p class="funfact__desc">Projects Completed</p>
             </div>
             <div class="funfact__item">
               <i class="bi bi-heart-fill funfact__icon orange"></i>
-              <span class="funfact__count">1050+</span>
+              <span class="funfact__count" data-count="1234"></span>
               <p class="funfact__desc">Happy Clients</p>
             </div>
 
             <div class="funfact__item">
               <i class="bi bi-award-fill funfact__icon green"></i>
-              <span class="funfact__count">1050+</span>
+              <span class="funfact__count" data-count="4765"></span>
               <p class="funfact__desc">Design Awards</p>
             </div>
             <div class="funfact__item">
               <i class="bi bi-basket3-fill funfact__icon orange"></i>
-              <span class="funfact__count">1050+</span>
+              <span class="funfact__count" data-count="4682"></span>
               <p class="funfact__desc">Happy Clients</p>
             </div>
             <div class="funfact__item">
               <i class="bi bi-bell-fill funfact__icon yellow"></i>
-              <span class="funfact__count">1050+</span>
+              <span class="funfact__count" data-count="1050"></span>
               <p class="funfact__desc">Line Of Codes</p>
             </div>
           </div>
@@ -336,7 +373,10 @@
         <div class="container">
           <h3 class="section-title">Meet Our Team</h3>
           <div class="ourteam__list">
-            <div class="ourteam__item">
+            <div
+              class="ourteam__item wow animate__slideInUp"
+              data-wow-delay="0.3s"
+            >
               <img src="./assets/team001.jpg" class="ourteam__avatar" />
               <h4 class="ourteam__name">Christina Hawking</h4>
               <p class="ourteam__office">Maketing Manager</p>
@@ -359,7 +399,10 @@
                 ></a>
               </div>
             </div>
-            <div class="ourteam__item">
+            <div
+              class="ourteam__item wow animate__slideInUp"
+              data-wow-delay="0.4s"
+            >
               <img src="./assets/team001.jpg" class="ourteam__avatar" />
               <h4 class="ourteam__name">Christina Hawking</h4>
               <p class="ourteam__office">Maketing Manager</p>
@@ -382,7 +425,10 @@
                 ></a>
               </div>
             </div>
-            <div class="ourteam__item">
+            <div
+              class="ourteam__item wow animate__slideInUp"
+              data-wow-delay="0.5s"
+            >
               <img src="./assets/team001.jpg" class="ourteam__avatar" />
               <h4 class="ourteam__name">Christina Hawking</h4>
               <p class="ourteam__office">Maketing Manager</p>
@@ -413,7 +459,7 @@
       <section class="section-grey howitwork" id="howitwork">
         <div class="container">
           <div class="howitwork__wrap">
-            <div class="left">
+            <div class="left wow animate__slideInLeft" data-wow-delay="0.5s">
               <h1 class="howitwork__title section-title">How It Work</h1>
               <p>
                 Quis autem velis ets reprehender net etid quiste netsum
@@ -443,7 +489,7 @@
                 </div>
               </div>
             </div>
-            <div class="right">
+            <div class="right wow animate__slideInRight" data-wow-delay="0.5s">
               <div class="accordion">
                 <div class="accordion__item box-shadow active">
                   <div class="accordion__head">
@@ -509,7 +555,10 @@
             Pricing for every business, at any stage
           </h1>
           <div class="price__list">
-            <div class="price__item box-shadow">
+            <div
+              class="price__item box-shadow wow animate__slideInUp"
+              data-wow-delay="0.3s"
+            >
               <div class="price__type">Basic</div>
               <div class="price__amount">$25</div>
               <div class="price__time">per month</div>
@@ -533,7 +582,10 @@
               </ul>
               <button class="btn btn--price">FREE 15-DAYS TRIAL</button>
             </div>
-            <div class="price__item box-shadow">
+            <div
+              class="price__item box-shadow wow animate__slideInUp"
+              data-wow-delay="0.4s"
+            >
               <div class="price__type">Basic</div>
               <div class="price__amount">$25</div>
               <div class="price__time">per month</div>
@@ -557,7 +609,10 @@
               </ul>
               <button class="btn">FREE 15-DAYS TRIAL</button>
             </div>
-            <div class="price__item box-shadow">
+            <div
+              class="price__item box-shadow wow animate__slideInUp"
+              data-wow-delay="0.5s"
+            >
               <div class="price__type">Basic</div>
               <div class="price__amount">$25</div>
               <div class="price__time">per month</div>
@@ -590,7 +645,10 @@
         <div class="container">
           <h1 class="section-title">Amazing Features</h1>
           <div class="feature__list">
-            <div class="feature__item">
+            <div
+              class="feature__item wow animate__slideInUp"
+              data-wow-delay="0.1s"
+            >
               <div class="feature__icon"><i class="bi bi-gem green"></i></div>
               <div class="feature__info">
                 <h4 class="feature__title">Support 24/7</h4>
@@ -600,7 +658,10 @@
                 </p>
               </div>
             </div>
-            <div class="feature__item">
+            <div
+              class="feature__item wow animate__slideInUp"
+              data-wow-delay="0.2s"
+            >
               <div class="feature__icon"><i class="bi bi-people blue"></i></div>
               <div class="feature__info">
                 <h4 class="feature__title">User Friendly</h4>
@@ -610,7 +671,10 @@
                 </p>
               </div>
             </div>
-            <div class="feature__item">
+            <div
+              class="feature__item wow animate__slideInUp"
+              data-wow-delay="0.3s"
+            >
               <div class="feature__icon"><i class="bi bi-bell orange"></i></div>
               <div class="feature__info">
                 <h4 class="feature__title">Notifications</h4>
@@ -620,7 +684,10 @@
                 </p>
               </div>
             </div>
-            <div class="feature__item">
+            <div
+              class="feature__item wow animate__slideInUp"
+              data-wow-delay="0.4s"
+            >
               <div class="feature__icon"><i class="bi bi-gear blue"></i></div>
               <div class="feature__info">
                 <h4 class="feature__title">Accesbility</h4>
@@ -630,7 +697,10 @@
                 </p>
               </div>
             </div>
-            <div class="feature__item">
+            <div
+              class="feature__item wow animate__slideInUp"
+              data-wow-delay="0.5s"
+            >
               <div class="feature__icon">
                 <i class="bi bi-cash-stack orange"></i>
               </div>
@@ -642,7 +712,10 @@
                 </p>
               </div>
             </div>
-            <div class="feature__item">
+            <div
+              class="feature__item wow animate__slideInUp"
+              data-wow-delay="0.6s"
+            >
               <div class="feature__icon">
                 <i class="bi bi-chat-left-text green"></i>
               </div>
@@ -661,7 +734,7 @@
       <!-- Begin banner testimonial -->
       <section class="section-white no-padding-bottom banner-testi">
         <div class="container banner-testi__wrap">
-          <div>
+          <div class="wow animate__slideInLeft" data-wow-delay="0.5s">
             <p class="banner-testi__quote">
               “People who succeed in business aren't afraid to hear feedback
               from their customers - they actually thrive from it.”
@@ -669,7 +742,7 @@
             <h5 class="banner-testi__author">Johanna S. Richardson</h5>
             <p class="banner-testi__ceo">CEO Essentials</p>
           </div>
-          <div>
+          <div class="wow animate__slideInRight" data-wow-delay="0.5s">
             <img
               src="./assets/testimonials-woman.jpg"
               style="vertical-align: middle"
@@ -683,7 +756,10 @@
         <div class="container">
           <h1 class="section-title">Our Blog</h1>
           <div class="blog__list">
-            <div class="blog__item box-shadow hover-up">
+            <div
+              class="blog__item box-shadow hover-up wow animate__slideInUp"
+              data-wow-delay="0.3s"
+            >
               <a href="#" class="blog__image"
                 ><img src="./assets/blog4.jpg" alt="" />
                 <div class="blog__image--overlay">
@@ -703,7 +779,10 @@
                 </p>
               </div>
             </div>
-            <div class="blog__item box-shadow hover-up">
+            <div
+              class="blog__item box-shadow hover-up wow animate__slideInUp"
+              data-wow-delay="0.4s"
+            >
               <a href="#" class="blog__image"
                 ><img src="./assets/blog4.jpg" alt="" />
                 <div class="blog__image--overlay">
@@ -723,7 +802,10 @@
                 </p>
               </div>
             </div>
-            <div class="blog__item box-shadow hover-up">
+            <div
+              class="blog__item box-shadow hover-up wow animate__slideInUp"
+              data-wow-delay="0.5s"
+            >
               <a href="#" class="blog__image"
                 ><img src="./assets/blog4.jpg" alt="" />
                 <div class="blog__image--overlay">
@@ -750,7 +832,10 @@
       <!-- Begin contact -->
       <section class="section-white contact" id="contact">
         <div class="container">
-          <div class="contact__text">
+          <div
+            class="contact__text wow animate__slideInLeft"
+            data-wow-delay="0.5s"
+          >
             <h3 class="section-title">Get in touch</h3>
             <form action="">
               <div class="form-control">
@@ -792,7 +877,10 @@
               <div><button type="submit" class="btn">SEND MESSAGE</button></div>
             </form>
           </div>
-          <div class="contact__map">
+          <div
+            class="contact__map wow animate__slideInRight"
+            data-wow-delay="0.5s"
+          >
             <h3 class="section-title">How to find us</h3>
             <div class="contact__map--iframe">
               <iframe
@@ -850,6 +938,18 @@
           clickable: true,
         },
       });
+    </script>
+    <!-- wowjs -->
+    <script src="./js/wow.js"></script>
+    <script>
+      wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animate__animated', // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true, // default
+      });
+      wow.init();
     </script>
     <!-- App js -->
     <script src="./js/app.js"></script>

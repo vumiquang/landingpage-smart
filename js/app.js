@@ -11,6 +11,9 @@ const eleAccordions = document.querySelectorAll('.accordion .accordion__item');
 const eleHeader = document.querySelector('header');
 const eleSections = [...document.querySelectorAll('section')];
 const navLink = [...document.querySelectorAll('.nav-link')];
+
+const eleFunfact = document.querySelector('.funfact__list');
+const eleFunfactCount = [...document.querySelectorAll('.funfact__count')];
 //===========   Toggle menu ============
 toggleMenu.onclick = () => {
   if (menuMoble.classList.contains('active')) {
@@ -129,7 +132,12 @@ window.addEventListener('scroll', stickyMenu);
 let options = {
   threshold: 0.6,
 };
+let firstTime = true;
 function callback(entries, observer) {
+  if (firstTime) {
+    firstTime = false;
+    return;
+  }
   entries.forEach((entry) => {
     let id = entry.target.id || '-';
     if (id === '-') return;
@@ -140,7 +148,6 @@ function callback(entries, observer) {
 
     navLink.forEach((nav) => {
       let hrefText = nav.getAttribute('href').split('#').join('');
-
       if (hrefText == id) {
         nav.classList.add('active');
       }
@@ -151,3 +158,30 @@ let observer = new IntersectionObserver(callback, options);
 eleSections.forEach((sec) => {
   observer.observe(sec);
 });
+
+// Count up funfact
+let firstTimeCount = true;
+const checkScrollFunfact = () => {
+  if (window.innerHeight - 150 > eleFunfact.getBoundingClientRect().top) {
+    if (!firstTimeCount) {
+      return;
+    }
+    eleFunfactCount.forEach((ele) => {
+      let countLoop = 20;
+      let count = parseInt(ele.getAttribute('data-count'));
+      let start = 0;
+      let step = Math.round(count / countLoop);
+
+      const timerCount = setInterval(() => {
+        if (start > count) {
+          start = count;
+          clearTimeout(timerCount);
+        }
+        ele.innerHTML = start;
+        start += step;
+      }, 50);
+    });
+    firstTimeCount = false;
+  }
+};
+window.addEventListener('scroll', checkScrollFunfact);
